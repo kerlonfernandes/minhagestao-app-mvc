@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+/* styles.css */
+
+/* Estilizar o header */
+header {
+  background-color: #f8f9fa; /* Cor de fundo */
+  padding: 15px; /* Espaçamento interno */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+
+}
+
+ .area-1{
+
+    align-items: center;
+}
+/* Estilizar a navbar */
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-right: 15px;
+}
+
+.nav-link {
+  color: #333; /* Cor do texto */
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #555; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilizar o logo */
+.navbar-brand img {
+  height: 40px; /* Altura do logo */
+}
+
+/* Estilizar o botão toggle */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+
+
+/* Estilizar o link ativo */
+.nav-item .active {
+  font-weight: bold;
+}
+
+.navbar-text form {
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar-text form button {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.navbar-text form button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar-text form button:focus {
+    outline: none;
+}
+
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* .custom-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+.custom-table th {
+    background-color: #f8f9fa;
+}
+
+.custom-table td {
+    background-color: #fff;
+}
+
+.custom-table td:hover {
+    background-color: #f8f9fa;
+}
+
+.custom-table td button {
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.custom-table td button:hover {
+    background-color: #0056b3;
+}
+
+.custom-table td a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.custom-table td .btn-danger {
+    background-color: #dc3545;
+}
+
+.custom-table td .btn-danger:hover {
+    background-color: #c82333;
+} */
+
+
+
+.btn{
+    border: none;
+    color: rgba(0, 0, 0);
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+.btn-acessa{
+  border: none;
+  color: rgba(0, 0, 0);
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-acessa:hover {
+  transform: translateY(-2px);
+}
+
+/* .table-hover tr:hover {
+    background-color: #f5f5f5;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.table-hover tr:hover td {
+    filter: blur(2px);
+    transition: filter 0.2s, opacity 0.2s;
+}
+
+.table-hover tr:hover td:hover {
+    filter: none;
+    opacity: 1;
+} */
+
+.nav-link:hover{
+    opacity: 0.1;
+    transition: filter 0.2s, opacity 0.2s;
+}
+
+/* Estilo do input tipo "time" */
+.time-input {
+    border: none;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    width: 150px;
+    outline: none;
+  }
+  
+  /* Estilo quando o cursor estiver sobre o input */
+  .time-input:hover {
+    background-color: #e6e6e6;
+  }
+  
+  /* Estilo quando o input estiver focado */
+  .time-input:focus {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Estilos para o container do input */
+.input-container {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para o label */
+  .input-container label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos para o input de texto */
+  .input-container input[type="text"],
+  .input-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  /* Estilos para o input de texto quando estiver em foco */
+  .input-container input[type="text"]:focus,
+  .input-container textarea:focus {
+    background-color: #fff;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Estilo para o input date */
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  /* Estilo para remover seta padrão do input date em alguns navegadores */
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+  
+  /* Estilo para a seta em navegadores Firefox */
+  input[type="date"]::-moz-calendar-picker-indicator {
+    display: none;
+  }
+  
+  /* Estilo para o input date quando estiver em foco */
+  input[type="date"]:focus {
+    background-color: #fff;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  }
+  
+.link-horario{
+
+  text-decoration: none;
+  
+}
+
+.hov {
+
+  cursor: pointer;
+
+}
+
+.center-image {
+  display: block;
+  margin-top: 20px;
+  margin: 0 auto; /* Define as margens laterais como 'auto' para centralizar horizontalmente */
+}
+
+.prod-img {
+
+  border-radius: 10px;
+
+}
+
+.delete-cat {
+
+  cursor: pointer;
+  background-color: #5555552d;
+  border-radius: 10px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Z-index alto para que fique acima de outros elementos */
+}
+
+/* Estilos para o contêiner do spinner */
+#loader-container {
+  text-align: center;
+}
+
+/* #custom-loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#89CFF3 94%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#89CFF3);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation: s3 1s infinite linear;
+}
+
+@keyframes s3 { 
+  100% { transform: rotate(1turn) }
+} */
+
+/* HTML: <div class="loader"></div> */
+#custom-loader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+}
+@keyframes l5 {
+    0%  {box-shadow: 20px 0 #000, -20px 0 #0002;background: #000 }
+    33% {box-shadow: 20px 0 #000, -20px 0 #0002;background: #0002}
+    66% {box-shadow: 20px 0 #0002,-20px 0 #000; background: #0002}
+    100%{box-shadow: 20px 0 #0002,-20px 0 #000; background: #000 }
+}
+
+
+
+.custom-loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#766DF4 94%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#766DF4);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation:s3 1s infinite linear;
+}
+
+@keyframes s3{ 
+  100%{transform: rotate(1turn)}
+}
+
+
+.check-animation {
+  color: green;
+  display: inline-block;
+  font-size: 0; /* Define o tamanho inicial para 0 */
+  opacity: 0; /* Define a opacidade inicial para 0 */
+  transform: scale(0); /* Define a escala inicial para 0 */
+  transition: all 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.check-animation.active {
+  font-size: 16px; /* Define o tamanho desejado */
+  opacity: 1; /* Define a opacidade para 1 */
+  transform: scale(1); /* Define a escala para 1 (tamanho original) */
+}
+.card-areas-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: center;
+}
+
+.card-areas {
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 25px;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  flex: 1;
+  max-width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  text-decoration: underline white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  
+}
+
+.card-areas:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  text-decoration: underline white;
+
+}
+
+@media (max-width: 768px) {
+  .card-areas {
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

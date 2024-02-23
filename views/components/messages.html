@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+            /* Cor de fundo do corpo da página */
+        }
+
+        .message-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .message-container p {
+            margin: 0;
+        }
+
+        .close-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+    </style>
+    <title>Message</title>
+</head>
+
+<body>
+
+    <div class="message-container" id="messageContainer">
+        <span class="close-btn" onclick="fecharMensagem()">&times;</span>
+        <p id="messageContent"></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fazerRequisicaoAjax();
+        });
+
+        function fazerRequisicaoAjax() {
+            setTimeout(function () {
+                // Suponha que a requisição retornou um objeto JSON
+                var respostaJson = {
+                    sucesso: true,
+                    mensagem: "Ocorreu um erro ao processar a solicitação."
+                };
+
+                if (respostaJson.sucesso) {
+                    exibirMensagemDeSucesso(respostaJson.mensagem);
+                } else {
+                    exibirMensagemDeErro(respostaJson.mensagem);
+                }
+            }, 2000);
+        }
+
+        function exibirMensagemDeSucesso(mensagem) {
+            var mensagemContainer = document.getElementById('messageContainer');
+            var messageContent = document.getElementById('messageContent');
+            messageContent.innerHTML = mensagem;
+            mensagemContainer.style.backgroundColor = '#4CAF50'; // Cor de sucesso
+            exibirMensagem(mensagemContainer);
+        }
+
+        function exibirMensagemDeErro(mensagem) {
+            var mensagemContainer = document.getElementById('messageContainer');
+            var messageContent = document.getElementById('messageContent');
+            messageContent.innerHTML = mensagem;
+            mensagemContainer.style.backgroundColor = '#FF5733'; // Cor de erro
+            exibirMensagem(mensagemContainer);
+        }
+
+        function exibirMensagem(mensagemContainer) {
+            mensagemContainer.style.display = 'block';
+
+            // Inicia o fade in
+            setTimeout(function () {
+                mensagemContainer.style.opacity = 1;
+            }, 10);
+
+            setTimeout(function () {
+                fecharMensagem(); // Removido o argumento aqui
+            }, 5000);
+        }
+
+        function fecharMensagem() {
+            var mensagemContainer = document.getElementById('messageContainer');
+
+            // Inicia o fade out
+            mensagemContainer.style.opacity = 0;
+
+            setTimeout(function () {
+                mensagemContainer.style.display = 'none';
+                mensagemContainer.style.opacity = 1; // Reinicia a opacidade
+            }, 500);
+        }
+    </script>
+</body>
+
+</html>

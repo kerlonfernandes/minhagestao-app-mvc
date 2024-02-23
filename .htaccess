@@ -1,0 +1,21 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.*)$ index.php?url=$1 [QSA]
+
+
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+
+#     # Remover barras finais de URLs (exceto diretório base)
+#     RewriteCond %{REQUEST_URI} ^(.+)/$
+#     RewriteCond %{REQUEST_URI} !^/minhagestao_app/$
+#     RewriteCond %{REQUEST_URI} !^/minhagestao_app/auth$
+#     RewriteRule ^ %1 [L,R=301]
+
+#     RewriteCond %{REQUEST_FILENAME} !-d
+#     RewriteCond %{REQUEST_FILENAME} !-f
+#     RewriteRule ^(.*)$ index.php?url=$1 [QSA]
+# </IfModule>

@@ -1,0 +1,22 @@
+
+body {
+    /* #393646 */
+    color: #2D2424 ;
+    font-family: 'Roboto', sans-serif;
+
+    overflow: auto;
+
+}
+
+.card {
+    box-shadow: 6px 7px 2px -1px rgba(128, 128, 128, 0.23);
+}
+
+
+.trash-icon{
+
+    background-color: none;
+  
+  }
+
+  

@@ -1,0 +1,27 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* Altere de "left" para "right" para posicioná-lo à direita */
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.0);
+    padding: 20px;
+    color: #fff;
+    z-index: 9999;
+    text-align: right;
+    /* Alinhar o texto à direita */
+}
+
+
+.alert-box {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Posiciona o overlay no canto esquerdo da tela */
+.overlay {
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    /* Certifique-se de que o overlay está visível no canto esquerdo */
+}
