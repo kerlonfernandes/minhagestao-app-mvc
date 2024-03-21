@@ -21,7 +21,7 @@ define('MYSQL_CONFIG', [
 
 // EMAIL config
 define('MAILUSER', 'batatrap@gmail.com');
-define('MAILPASS', '@pou20145');
+define('MAILPASS', '');
 define('MAILPORT', '465');
 define('MAILHOST', 'mail..esp.br');
 define('FROM_NAME', ''); // Quem envia 
