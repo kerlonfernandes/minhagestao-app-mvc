@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.3.0
+    container_name: mysql_container_php
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: mg_db
+      MYSQL_USER: mg_user
+      MYSQL_PASSWORD: mg_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./mg_db.sql:/docker-entrypoint-initdb.d/mg_db.sql 
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_insano
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: rootpass
+    ports:
+      - "8081:80"
+
+  php:
+    build:
+      context: .
+    depends_on:
+      - db
+    environment:
+      MYSQL_DB: mytempo
+      MYSQL_USER: mytempo_user
+      MYSQL_PASS: mytempo1
+    ports:
+      - "8082:80"
+
+volumes:
+  db_data:
