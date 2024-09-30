@@ -52,7 +52,6 @@ id_usuario;", ['id' => $id]);
 
 $resultado = $result->results;
 
-// Criar um array associativo para retornar os resultados em formato JSON
 $response = array(
     "jan_ent" => $resultado[0]->Jan_Entrada,
     "fev_ent" => $resultado[0]->Fev_Entrada,
@@ -81,10 +80,8 @@ $response = array(
     "dez_sai" => $resultado[0]->Dez_Saida
 );
 
-// Definir o cabeçalho como JSON
 header('Content-Type: application/json');
 
-// Retornar os resultados como JSON
 echo json_encode($response);
 
 ?>
