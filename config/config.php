@@ -41,7 +41,5 @@ function printData($data, $die = true) {
 
 $BASE_URL = "https://" . $_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI'] . "?") . "/";
 
+define("SITE", "http://" . $_SERVER['SERVER_NAME'] . rtrim(dirname($_SERVER['SCRIPT_NAME'])));
 
-
-
-define("SITE", "https://" . $_SERVER['SERVER_NAME'] . "/minhagestao");
