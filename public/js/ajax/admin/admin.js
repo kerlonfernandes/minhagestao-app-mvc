@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // data: { pessoa: nome },
     success: function (data) {
       $(".area-users").hide().html(data).fadeIn('fast');
-      
+
       let inputUsuario = document.getElementById('pesquisar-usuario');
       inputUsuario.addEventListener('input', function () {
         var dado = this.value.trim();
-        
+
         consultarUsuarios(dado);
 
       });

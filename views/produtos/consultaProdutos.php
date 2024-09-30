@@ -20,28 +20,28 @@ if (isset($_GET['produto'])) {
     ];
 
     $result = $query->execute_query($sql, $parameters);
-    
 }
 
 if ($result->status === 'success' && count($result->results) > 0) {
 
     foreach ($result->results as $row) {
-        ?>
+?>
         <tr class='resultados' scope='row' style='text-align: center;'>
             <td style='margin: 5px; '>
                 <div style='display: flex;'>
                     <div class='btn-campo' style='display:flex; padding: 10px; flex-wrap: wrap;'>
-                        <div>
-                            <button class='btn btn-acessa'>
-                                <a href="<?= SITE ?>/produto/<?= $row->codigo_produto ?>" style='text-decoration: none;'>
-                                    Detalhes do produto
-                                </a>
-                            </button>
-                        </div>
-                        <form method='POST' action='ajax/deleta-produto.php?id=<?= $row->id ?>'>
-                            <input type='hidden' name='id' value='<?= $row->id ?>'>
-                            <button class='btn' style='color:red;' id='deleta-produto'>Deletar</button>
-                        </form>
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Action
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item">Action</a></li>
+                            <li><a class="dropdown-item">Another action</a></li>
+                            <li><a class="dropdown-item">Something else here</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="<?= SITE ?>/produto/<?= $row->codigo_produto ?>">Vizualizar produto</a></li>
+                        </ul>
                     </div>
                 </div>
             </td>
@@ -51,12 +51,14 @@ if ($result->status === 'success' && count($result->results) > 0) {
             <td><?= $row->qtd_no_estoque ?></td>
             <td><?= $row->codigo_produto ?></td>
         </tr>
-        <?php
+    <?php
     }
 } else {
     ?>
-    <td></td><td></td><td style='text-align:center;'>Nenhum resultado encontrado.</td>
-    <?php
+    <td></td>
+    <td></td>
+    <td style='text-align:center;'>Nenhum resultado encontrado.</td>
+<?php
 }
-    
+
 ?>

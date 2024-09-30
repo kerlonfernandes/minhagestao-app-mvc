@@ -20,7 +20,6 @@ $(document).ready(function () {
 
 
     function consultarProdutos(nome) {
-        // Carregar o spinner no container
         $("#spinner-container");
 
         $("#loader").show();
@@ -50,51 +49,49 @@ $(document).ready(function () {
         });
     });
     function qtd_produtos(id_user) {
-        // Carregar o spinner no container
-        $("#spinner-container-qtd").show(); // Mostrar o spinner
+        $("#spinner-container-qtd").show(); 
         $("#loader_qtd").show();
 
         $.ajax({
             url: "views/produtos/qtd_produtos.php",
             method: "GET",
-            data: { id_user: id_user }, // Renomeando a chave para id_user
+            data: { id_user: id_user },
             success: function (data) {
                 $("#quantidade_de_produtos").html(data);
             },
             error: function () {
-                $("#spinner-container-qtd").show(); // Mostrar o spinner
+                $("#spinner-container-qtd").show();
                 $("#loader_qtd").show();
 
             },
             complete: function () {
-                ; // Esconder o loader após a conclusão
+                ; 
             }
         });
     }
     function cat_produtos(id_user) {
-        // Carregar o spinner no container
-        $("#spinner-container-cat").show(); // Mostrar o spinner
+        $("#spinner-container-cat").show(); 
         $("#loader_cat").show();
 
         $.ajax({
             url: "views/produtos/consultaCategoriasQtd.php",
             method: "GET",
-            data: { id_user: id_user }, // Renomeando a chave para id_user
+            data: { id_user: id_user }, 
             success: function (data) {
                 $("#categorias_cad").html(data);
             },
             error: function () {
-                $("#spinner-container-cat").show(); // Mostrar o spinner
+                $("#spinner-container-cat").show();
                 $("#loader_cat").show();
 
             },
             complete: function () {
-                ; // Esconder o loader após a conclusão
+                ; 
             }
         });
     }
 
-    // Carregar os resultados iniciais
+   
     consultarProdutos('');
     qtd_produtos()
     cat_produtos()
@@ -131,10 +128,8 @@ $(document).ready(function () {
             let preco = $("#moeda").val()
             let qtd = $("#qtd").val()
 
-            // Obtém o arquivo de imagem selecionado
             let imagem = document.getElementById('imagemInput').files[0];
 
-            // Cria um objeto FormData para enviar os dados, incluindo a imagem
             let formData = new FormData();
             formData.append('categoria', categoria);
             formData.append('titulo', titulo);

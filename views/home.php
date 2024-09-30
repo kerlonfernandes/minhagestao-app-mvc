@@ -13,15 +13,15 @@
 
 
   <div class="areas">
-  <div class="text-center">
-  <div id="loader" role="status">
-                                            <div id="spinner-container" style='padding:24px;'><img src="<?= SITE ?>/public/images/spinner.gif" alt="loading..." style="width:24px
+    <div class="text-center">
+      <div id="loader" role="status">
+        <div id="spinner-container" style='padding:24px;'><img src="<?= SITE ?>/public/images/spinner.gif" alt="loading..." style="width:24px
                                             ;"></div>
-                                        </div>
-  </div>
+      </div>
+    </div>
 
   </div>
-  
+
   <script src="<?= SITE ?>/public/js/config.js?id=<?= uniqid() ?>"></script>
 
   <script src="<?= SITE ?>/public/js/assets/code.jquery.com_jquery-3.7.1.min.js"></script>

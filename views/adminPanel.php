@@ -96,10 +96,10 @@ ini_set('display_errors', 1);
     </div>
 
 
-        <!-- Use any element to open the sidenav -->
+
         <span onclick="openNav()">open</span>
 
-        <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+
         <div id="main">
 
         <?php if (!isset($_GET['metodo'])) { ?>

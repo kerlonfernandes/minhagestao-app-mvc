@@ -113,6 +113,8 @@ let documentoInput;
 
 if($("#cpf")) {
      documentoInput = document.getElementById('cpf');
+     documentoInput.addEventListener('input', formatarDocumento);
+
 }
 if($(".cliente-cpf-editar")) {
      documentoInput = document.querySelector('.cliente-cpf-editar');
@@ -120,7 +122,7 @@ if($(".cliente-cpf-editar")) {
 }
 
 
-documentoInput.addEventListener('input', formatarDocumento);
+
 
 function formatarDocumento() {
     let valor = documentoInput.value.replace(/\D/g, '');
