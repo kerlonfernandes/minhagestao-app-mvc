@@ -16,7 +16,7 @@ define('MYSQL_CONFIG', [
     'host' => 'localhost',
     'database' => 'mg_db',
     'username' => 'root',
-    'password' => '',
+    'password' => 'rootpass',
 ]);
 
 // EMAIL config
@@ -39,9 +39,9 @@ function printData($data, $die = true) {
 
 } 
 
-$BASE_URL = "https://" . $_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI'] . "?") . "/";
+$BASE_URL = "http://" . $_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI'] . "?") . "/";
 
 
 
 
-define("SITE", "https://" . $_SERVER['SERVER_NAME'] . "/minhagestao");
+define("SITE", "http://" . $_SERVER['SERVER_NAME'] );//. "/minhagestao");
